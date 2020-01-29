@@ -16,11 +16,13 @@ public class Weapon {
         tempDmg *= Math.random()/2 + .5;
         for(String weakness : target.weakness) {
             if (weakness.equals(dmgType)) {
-                return dmg*2;
+                return tempDmg*2;
             }
         }
-        
-
+        double critRoll = Math.random();
+        if (critRoll < crit) {
+            tempDmg *= 2;
+        }
         return dmg;
     }
 
