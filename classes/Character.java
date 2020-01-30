@@ -2,11 +2,11 @@ import java.util.*;
 class Character{
     private static String CLASS_NAME;
     private String name;
-    private int hp,xp,speed;
-    private String [] weeknesses;
-    public Character(String nameIn, String[] week, int speedIn){
+    private int hp,xp,speed,mana;
+    private String [] weaknesses;
+    public Character(String nameIn, String[] weak, int speedIn){
         name = nameIn;
-        weeknesses = week;
+        weaknesses = weak;
         speed = speedIn;
     }
 
@@ -35,23 +35,43 @@ class Character{
     }
 
     public boolean isWeakTo(String in){
-        return Arrays.asList(weeknesses).contains(in) ;
+        return Arrays.asList(weaknesses).contains(in) ;
     }
 
     public String getName(){
         return this.name;
     }
 
-    public void attack(Character in){
-
-    }
-
     public void takeDmg(int in){
         this.hp -= in;
     }
 
+    public int getMana(){
+        return this.mana;
+    }
+
+    public void setMana(int in){
+        this.mana = in;
+    }
+
+    public void useMana(int in){
+        this.mana -= in;
+    }
+
     public boolean isAlive(){
         return this.hp > 0;
+    }
+
+    public int getSpeed(){
+        return this.speed;
+    }
+
+    public void chooseAction(Character in){
+
+    }
+
+    public String toString(){
+        return "";
     }
 
 }
