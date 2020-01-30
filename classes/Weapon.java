@@ -35,7 +35,7 @@ public class Weapon {
         if (critRoll < crit) {
             tempDmg *= 2;
         }
-        return dmg;
+        return tempDmg;
     }
 
     /**
