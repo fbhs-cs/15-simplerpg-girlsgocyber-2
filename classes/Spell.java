@@ -75,14 +75,16 @@ public class Spell {
      * @param player1
      * @param player2
      */
-    // public void cast(Character player1, Character player2) {
-    //     if(player1.getMana() >= manaReq) {
-    //         if(player1.isWeakTo(dmgType)) {
-    //             player1.takeDmg(dmg*2);
-    //         }
-    //         else {
-    //             player1.takeDmg(dmg);
-    //         }
-    //     }
-    // }
+    public void cast(Character player1, Character player2) {
+        if(player1.getMana() >= manaReq) {
+            if(player2.isWeakTo(dmgType)) {
+                player2.takeDmg(dmg*2);
+                player1.useMana(manaReq);
+            }
+            else {
+                player2.takeDmg(dmg);
+                player1.useMana(manaReq);
+            }
+        }
+    }
 }
