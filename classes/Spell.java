@@ -2,17 +2,21 @@ public class Spell {
     int dmg;
     String dmgType;
     int manaReq;
+    String name;
     String SPELL_TYPE;
 
     
-    public Spell(int damage, String damageType, int manaToCast) {
+    public Spell(int damage, String damageType, int manaToCast, String spellName) {
         dmg = damage;
         dmgType = damageType;
         manaReq = manaToCast;
+        name = spellName;
     }
 
     
     /** 
+     * Returns the amount of damage the base spell 
+     * deals
      * 
      * @return int
      */
@@ -22,6 +26,8 @@ public class Spell {
 
     
     /** 
+     * Returns the type of damage the spell deals
+     * 
      * @return String
      */
     public String getDmgType() {
@@ -30,10 +36,33 @@ public class Spell {
 
     
     /** 
+     * Returns the amount of mana required by the spell
+     * 
      * @return int
      */
     public int getManaReq() {
         return manaReq;
+    }
+
+    
+    
+    /** 
+     * Returns the spell's name
+     * 
+     * @return String
+     */
+    public String getName() {
+        return name;
+    }
+
+    
+    /** 
+     * Returns a formated string representation of the spell
+     * 
+     * @return String
+     */
+    public String toString() {
+        return String.format("Name: %s, Damage: %d, Damage Type: %s, Mana Required: %d", name, dmg, dmgType, manaReq);
     }
 
     
@@ -46,14 +75,14 @@ public class Spell {
      * @param player1
      * @param player2
      */
-    public void cast(Character player1, Character player2) {
-        if(player1.getMana() >= manaReq) {
-            if(player1.isWeakTo(dmgType)) {
-                player1.takeDmg(dmg*2);
-            }
-            else {
-                player1.takeDmg(dmg);
-            }
-        }
-    }
+    // public void cast(Character player1, Character player2) {
+    //     if(player1.getMana() >= manaReq) {
+    //         if(player1.isWeakTo(dmgType)) {
+    //             player1.takeDmg(dmg*2);
+    //         }
+    //         else {
+    //             player1.takeDmg(dmg);
+    //         }
+    //     }
+    // }
 }
