@@ -33,6 +33,7 @@ public class Weapon {
         }
         double critRoll = Math.random();
         if (critRoll < crit) {
+            System.out.println("You critically hit!");
             tempDmg *= 2;
         }
         return tempDmg;
