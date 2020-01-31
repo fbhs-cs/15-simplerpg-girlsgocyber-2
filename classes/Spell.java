@@ -1,9 +1,9 @@
 public class Spell {
-    int dmg;
-    String dmgType;
-    int manaReq;
-    String name;
-    String SPELL_TYPE;
+    protected int dmg;
+    protected String dmgType;
+    protected int manaReq;
+    protected String name;
+    protected static String SPELL_TYPE;
 
     
     public Spell(int damage, String damageType, int manaToCast, String spellName) {
