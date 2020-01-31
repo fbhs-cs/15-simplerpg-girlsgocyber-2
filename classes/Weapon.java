@@ -1,7 +1,7 @@
 public class Weapon {
     private int dmg; //dmg weapon can do
     private String dmgType; //
-    private String WEAPON_TYPE;
+    protected static String WEAPON_TYPE;
     private double crit;
 
     /**
@@ -76,7 +76,7 @@ public class Weapon {
      * returns weapons type, amount of damage, and damage type
      */
     public String toString() {
-        return WEAPON_TYPE + ": " + dmg + " " + dmgType;
+        return WEAPON_TYPE + ": " + dmg + " " + dmgType + " damage";
     }
 
 
