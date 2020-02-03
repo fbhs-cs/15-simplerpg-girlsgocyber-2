@@ -1,9 +1,8 @@
-public class Spell {
+public abstract class Spell {
     protected int dmg;
     protected String dmgType;
     protected int manaReq;
     protected String name;
-    protected static String SPELL_TYPE;
 
     
     public Spell(int damage, String damageType, int manaToCast, String spellName) {
@@ -67,24 +66,13 @@ public class Spell {
 
     
     /** 
-     * Casts a spell if the caster (player1) has enough
+     * Casts a spell if the caster (caster) has enough
      * mana. If the enemy has a weakness to the damage 
      * type, the spell damage is doubled. Reduces the 
      * HP of the target by the total spell damage.
      * 
-     * @param player1
-     * @param player2
+     * @param caster
+     * @param target
      */
-    public void cast(Character player1, Character player2) {
-        if(player1.getMana() >= manaReq) {
-            if(player2.isWeakTo(dmgType)) {
-                player2.takeDmg(dmg*2);
-                player1.useMana(manaReq);
-            }
-            else {
-                player2.takeDmg(dmg);
-                player1.useMana(manaReq);
-            }
-        }
-    }
+    public abstract void cast(Character caster, Character target);
 }
