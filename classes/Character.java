@@ -1,6 +1,6 @@
 import java.util.*;
-class Character{
-    private static String CLASS_NAME;
+abstract abstract class Character{
+    protected static String CLASS_NAME;
     private String name;
     private int hp,xp,speed,mana;
     private String [] weaknesses;
@@ -54,7 +54,7 @@ class Character{
     /** 
      * @return int
      */
-    private int getMaxXP(){
+    protected int getMaxHP(){
         return this.getLevel() * 10;
     }
 
@@ -127,16 +127,14 @@ class Character{
     /** 
      * @param in
      */
-    public void chooseAction(Character in){
-
-    }
+    public abstract void chooseAction(Character in);
 
     
     /** 
      * @return String
      */
     public String toString(){
-        return "";
+        return "Name: "+name+" HP: " + hp + " Level:" + this.getLevel()+" Speed: " + speed + " Weaknesses: "+Arrays.toString(weaknesses);
     }
 
 }
