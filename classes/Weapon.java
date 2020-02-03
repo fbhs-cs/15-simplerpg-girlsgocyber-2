@@ -1,4 +1,4 @@
-public class Weapon {
+public abstract class Weapon {
     private int dmg; //dmg weapon can do
     private String dmgType; //
     protected static String WEAPON_TYPE;
@@ -25,19 +25,7 @@ public class Weapon {
      * @param target
      * @return dmg output based on enemy weakness and crit chance.
      */
-    public int attack(Character target) {
-        int tempDmg = dmg;
-        tempDmg *= Math.random()/2 + .5;
-        if (target.isWeakTo(dmgType)) {
-            tempDmg *= 2;
-        }
-        double critRoll = Math.random();
-        if (critRoll < crit) {
-            System.out.println("You critically hit!");
-            tempDmg *= 2;
-        }
-        return tempDmg;
-    }
+    public abstract int attack(Character target);
 
     /**
      * returns WEAPON_TYPE
