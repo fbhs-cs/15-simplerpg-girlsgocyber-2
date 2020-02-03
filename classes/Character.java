@@ -1,5 +1,5 @@
 import java.util.*;
-abstract abstract class Character{
+public abstract class Character{
     protected static String CLASS_NAME;
     private String name;
     private int hp,xp,speed,mana;
@@ -105,6 +105,10 @@ abstract abstract class Character{
      */
     public void useMana(int in){
         this.mana -= in;
+    }
+
+    public void addMana(int in){
+        this.mana += in;
     }
 
     
