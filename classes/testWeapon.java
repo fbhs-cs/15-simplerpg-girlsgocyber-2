@@ -10,5 +10,6 @@ class testWeapon{
         out.println(s.getDmg());
         out.println(s.getCrit());
         out.println(s);
+        out.println(c);
     }
 }
