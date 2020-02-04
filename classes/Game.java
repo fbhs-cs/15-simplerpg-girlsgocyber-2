@@ -78,9 +78,9 @@ public class Game {
         if(classChoice == 1)
             player = new Wizard(name,new Splash()); // This needs to be updated for each class
         else if(classChoice == 2)
-            player = new Character(name, weakness,20); // update for the class
+            player = new Wizard(name,new Splash()); // update for the class
         else if(classChoice == 3)
-            player = new Character(name, weakness,5); // update for the class
+            player = new Wizard(name,new Splash()); // update for the class
 
         
     }
@@ -98,11 +98,11 @@ public class Game {
 
         double rand = Math.random();
         if(rand < 0.3) {
-            return new Character("Enemy1",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new Barbarian("Barbarian"); // change to enemy class constructor
         } else if (rand < 0.6) {
-            return new Character("Enemy2",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new Barbarian("Barbarian"); // change to enemy class constructor
         } else {
-            return new Character("Enemy3",WEAKNESSES[randWeakness],randSpeed); // change to enemy class constructor
+            return new Barbarian("Barbarian"); // change to enemy class constructor
         }
     }
 

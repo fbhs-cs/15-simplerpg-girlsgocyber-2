@@ -4,10 +4,11 @@ import static java.lang.System.*;
 public class Barbarian extends Character{
     private Spell spell;
     private Weapon weapon = new Sword(5,.1);
-    public Barbarian(String name, Spell spell){
+    public Barbarian(String name){
         super(name,new String []{"Blunt","Lightning"},20);
-        this.spell = spell;
         CLASS_NAME = "Barbatian";
+        this.setLevel(1);
+        this.setHP(this.getMaxHP());
     }
     public void chooseAction(Character in){
         int choice =(int) (Math.random() * 3);
@@ -40,5 +41,4 @@ public class Barbarian extends Character{
         }
 
     }
-}
 }
