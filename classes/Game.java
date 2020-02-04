@@ -38,7 +38,7 @@ public class Game {
         while (true) {
             try {
                 System.out.println("What class would you like to play?  Here are your options:");
-                System.out.println("1. Class #1"); // change this
+                System.out.println("1. Wizard"); // change this
                 System.out.println("2. Class #2"); // change this
                 System.out.println("3. Class #3"); // change this
                 System.out.print("> ");
@@ -76,7 +76,7 @@ public class Game {
         String weakness = WEAKNESSES[weaknessChoice-1];
 
         if(classChoice == 1)
-            player = new Character(name,weakness,10); // This needs to be updated for each class
+            player = new Wizard(name,new Splash()); // This needs to be updated for each class
         else if(classChoice == 2)
             player = new Character(name, weakness,20); // update for the class
         else if(classChoice == 3)
