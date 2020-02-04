@@ -3,7 +3,7 @@ import java.io.*;
 import static java.lang.System.*;
 public class Wizard extends Character{
     private Spell spell;
-    private Weapon weapon;
+    private Weapon weapon = new Sword(5,.1);
     public Wizard(String name, Spell spell){
         super(name,new String []{"slashing","dark"},20);
         this.spell = spell;
@@ -14,21 +14,21 @@ public class Wizard extends Character{
         int choice = -1;
         try{
         out.println("What would you like to do:");
-        out.println("0 [Throw Spell]");
-        out.println("1 [Regenerate Mana]");
-        out.println("2 [Attack with weapon]");
+        out.println("1 [Throw Spell]");
+        out.println("2 [Regenerate Mana]");
+        out.println("3 [Attack with weapon]");
         choice = Integer.parseInt(s.nextLine().trim());
-        if(choice > 2 || choice < 0){
+        if(choice > 3 || choice < 1){
             int dumb = 9/0;
         }
         }
         catch(Exception e){
             out.println("Sorry, That's not an option");
         }
-        if(choice == 0){
+        if(choice == 1){
             spell.cast(this, in);
         }
-        else if(choice == 1){
+        else if(choice == 2){
             this.addMana(5);
         }
         else{
