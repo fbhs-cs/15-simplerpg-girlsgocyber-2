@@ -10,6 +10,7 @@ public class Paladin extends Character {
         spell = new Lightningbolt();
     }
 
+    @Override
     public void chooseAction(Character in){
         Scanner s = new Scanner(System.in);
         int choice = -1;

@@ -6,6 +6,7 @@ public class Lightningbolt extends Spell {
     int dmg = 5;
     int manaReq = 2;
 
+    @Override
     public void cast(Character caster, Character target) {
         if(caster.getMana() >= manaReq) {
             if(target.isWeakTo(dmgType)) {
