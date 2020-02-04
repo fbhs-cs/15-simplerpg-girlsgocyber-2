@@ -19,5 +19,8 @@ public class Lightningbolt extends Spell {
                 System.out.printf("%s used %s and dealt %d lightning damage to %s.", caster.getName(), "Lightning Bolt", dmg, target.getName(), target.getName(), "lightning");
             }
         }
+        else {
+            System.out.println("Fizzle.");
+        }
     }
 }
