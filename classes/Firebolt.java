@@ -20,7 +20,7 @@ public class Firebolt extends Spell {
             }
         }
         else {
-            System.out.println("Fizzle.")
+            System.out.println("Fizzle.");
         }
     }
 }
