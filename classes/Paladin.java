@@ -4,9 +4,9 @@ import static java.lang.System.*;
 public class Paladin extends Character {
     private Spell spell;
     private Weapon weapon;
-    public Paladin(String name) {
+    public Paladin(String name,Weapon weapon) {
         super(name, new String[] {"Blunt","Dark"},1);
-        weapon = new Sword(8,.2);
+        this.weapon = weapon;
         spell = new Lightningbolt();
     }
 
