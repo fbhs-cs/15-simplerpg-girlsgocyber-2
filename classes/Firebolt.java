@@ -19,5 +19,8 @@ public class Firebolt extends Spell {
                 System.out.printf("%s used %s and dealt %d fire damage to %s.", caster.getName(), "Firebolt", dmg, target.getName(), target.getName(), "fire");
             }
         }
+        else {
+            System.out.println("Fizzle.")
+        }
     }
 }
