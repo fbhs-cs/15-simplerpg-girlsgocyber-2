@@ -13,6 +13,11 @@ public class Rogue extends Character{
         out.println("What would you like to do:");
         out.println("1. [Attack with weapon]");
         int choice = s.nextInt();
+        if (choice == 1) {
+            weapon.attack(in);
+        } else {
+            System.out.println("The Rogue sharpens his dagger menacingly...");
+        }
 
     }
 }
