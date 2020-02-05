@@ -10,6 +10,7 @@ public class Wizard extends Character{
         CLASS_NAME = "Wizard";
         this.setLevel(1);
         this.setHP(this.getMaxHP());
+        weapon.setWielder("Player");
     }
     public void chooseAction(Character in){
         Scanner s = new Scanner(System.in);

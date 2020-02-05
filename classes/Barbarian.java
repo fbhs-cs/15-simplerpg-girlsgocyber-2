@@ -6,10 +6,11 @@ public class Barbarian extends Character{
     private Weapon weapon = new Sword(5,.1);
     public Barbarian(String name){
         super(name,new String []{"Blunt","Lightning"},20);
-        CLASS_NAME = "Barbatian";
+        CLASS_NAME = "Barbarian";
         this.setLevel(1);
         this.setHP(this.getMaxHP());
         this.setMana(5);
+        weapon.setWielder("barbarian");
     }
     public void chooseAction(Character in){
         int choice =(int) (Math.random() * 3);

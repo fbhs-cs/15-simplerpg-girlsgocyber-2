@@ -8,7 +8,7 @@ public class Paladin extends Character {
         super(name, new String[] {"Blunt","Dark"},1);
         this.weapon = weapon;
         weapon.setWielder("Player");
-        spell = new Lightningbolt();
+        spell = new Smite();
     }
 
     @Override
