@@ -24,7 +24,7 @@ public class Spear extends Weapon {
             System.out.printf("You thrust your spear!\n");
         }
         else {
-            System.out.printf("The %s stabs you with a spear!",getWielder());
+            System.out.printf("The %s stabs you with a spear!\n",getWielder());
         }
         return tempDmg;
     }
