@@ -1,0 +1,3 @@
+class Drain extends Spell{
+    
+}

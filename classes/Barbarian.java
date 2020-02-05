@@ -12,6 +12,7 @@ public class Barbarian extends Character{
         this.setMana(5);
         weapon.setWielder("barbarian");
     }
+    @Override
     public void chooseAction(Character in){
         int choice =(int) (Math.random() * 3);
         if(choice == 0){
