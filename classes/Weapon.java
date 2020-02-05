@@ -3,6 +3,7 @@ public abstract class Weapon {
     private String dmgType; //
     protected static String WEAPON_TYPE;
     private double crit;
+    private String wielder;
 
     /**
      * Constructs a Weapon object
@@ -59,6 +60,13 @@ public abstract class Weapon {
         return crit;
     }
 
+    public String getWielder() {
+        return wielder;
+    }
+
+    public void setWielder(String c) {
+        wielder = c;
+    }
     
     /**
      * returns weapons type, amount of damage, and damage type
