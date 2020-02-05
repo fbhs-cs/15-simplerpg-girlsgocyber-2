@@ -8,6 +8,8 @@ public class Wizard extends Character{
         super(name,new String []{"slashing","dark"},20);
         this.spell = spell;
         CLASS_NAME = "Wizard";
+        this.setLevel(1);
+        this.setHP(this.getMaxHP());
     }
     public void chooseAction(Character in){
         Scanner s = new Scanner(System.in);
