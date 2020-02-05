@@ -6,6 +6,7 @@ public class Rogue extends Character{
     public Rogue(String name, Weapon wep) {
         super(name,new String []{"Slashing","Fire"},100);
         this.weapon = wep;
+        weapon.setWielder("Player");
         CLASS_NAME = "Rogue";
     }
     public void chooseAction(Character in){
