@@ -23,10 +23,6 @@ public class Wizard extends Character{
         if(choice > 3 || choice < 1){
             int dumb = 9/0;
         }
-        }
-        catch(Exception e){
-            out.println("Sorry, That's not an option");
-        }
         if(choice == 1){
             spell.cast(this, in);
         }
@@ -34,7 +30,11 @@ public class Wizard extends Character{
             this.addMana(5);
         }
         else{
-            weapon.attack(in);
+            in.takeDmg(weapon.attack(in));
+        }
+        }
+        catch(Exception e){
+            out.println("Sorry, That's not an option");
         }
 
     }
