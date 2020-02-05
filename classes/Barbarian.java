@@ -9,11 +9,12 @@ public class Barbarian extends Character{
         CLASS_NAME = "Barbatian";
         this.setLevel(1);
         this.setHP(this.getMaxHP());
+        this.setMana(5);
     }
     public void chooseAction(Character in){
         int choice =(int) (Math.random() * 3);
         if(choice == 0){
-            weapon.attack(in);
+            in.takeDmg(weapon.attack(in));
         }
         else{
             choice = (int) (Math.random()*5);

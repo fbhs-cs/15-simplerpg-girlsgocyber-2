@@ -138,7 +138,7 @@ public abstract class Character{
      * @return String
      */
     public String toString(){
-        return "Name: "+name+" HP: " + hp + " Level:" + this.getLevel()+" Speed: " + speed + " Weaknesses: "+Arrays.toString(weaknesses);
+        return "Name: "+name+" HP: " + hp + " Level:" + this.getLevel()+" Speed: " + speed + " Weaknesses: "+Arrays.toString(weaknesses) + " Mana: " + this.getMana();
     }
 
 }

@@ -54,27 +54,6 @@ public class Game {
             }
         }
 
-        int weaknessChoice;
-        while (true) {
-            try {
-                System.out.println("What weakness will your character have?  Here are your options:");
-                for(int i = 0; i < WEAKNESSES.length; i++) {
-                    System.out.printf("%d. %s\n",i+1,WEAKNESSES[i]);
-                }
-                System.out.print("> ");
-                weaknessChoice = Integer.parseInt(in.nextLine());
-                if(weaknessChoice < 1 || weaknessChoice > WEAKNESSES.length) {
-                    System.out.println("Invalid choice!");
-                }
-                break;
-
-            } catch (Exception e) {
-                System.out.println("You must enter a number!");
-            }
-        }
-
-        String weakness = WEAKNESSES[weaknessChoice-1];
-
         if(classChoice == 1)
             player = new Wizard(name,new Splash()); // This needs to be updated for each class
         else if(classChoice == 2)
