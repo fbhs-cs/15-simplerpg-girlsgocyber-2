@@ -12,10 +12,20 @@ public class Sword extends Weapon {
         }
         double critRoll = Math.random();
         if (critRoll < this.getCrit()) {
-            System.out.println("You critically hit!");
+            if (getWielder().equals("Player")) {
+                System.out.printf("You critifcally hit!/n");
+            }
+            else {
+                System.out.printf("The %s critically hit!\n",getWielder());
+            }
             tempDmg *= 2;
         }
-        System.out.println("You swing your sword");
+        if(getWielder().equals("Player")) {
+            System.out.printf("You swing your sword\n");
+        }
+        else {
+            System.out.printf("The %s swings a sword at you!",getWielder());
+        }
         return tempDmg;
     }
     
