@@ -3,6 +3,7 @@ public class Skeleton extends Character {
     public Skeleton() {
         super("Skeleton",new String[] {"Blunt","Holy"},10);
         weapon = new Sword(6,.1);
+        weapon.setWielder("skeleton");
     }
 
     @Override
