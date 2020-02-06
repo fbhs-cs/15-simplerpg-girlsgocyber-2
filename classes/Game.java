@@ -39,8 +39,8 @@ public class Game {
             try {
                 System.out.println("What class would you like to play?  Here are your options:");
                 System.out.println("1. Wizard"); // change this
-                System.out.println("2. Class #2"); // change this
-                System.out.println("3. Class #3"); // change this
+                System.out.println("2. Paladin"); // change this
+                System.out.println("3. Rogue"); // change this
                 System.out.print("> ");
                 classChoice = Integer.parseInt(in.nextLine());
                 if(classChoice < 1 || classChoice > 3) {
@@ -57,9 +57,9 @@ public class Game {
         if(classChoice == 1)
             player = new Wizard(name,new Splash()); // This needs to be updated for each class
         else if(classChoice == 2)
-            player = new Wizard(name,new Splash()); // update for the class
+            player = new Paladin(name,new Sword(6,.2)); // update for the class
         else if(classChoice == 3)
-            player = new Wizard(name,new Splash()); // update for the class
+            player = new Rogue(name,new Dagger(4,.8)); // update for the class
 
         
     }
@@ -79,9 +79,9 @@ public class Game {
         if(rand < 0.3) {
             return new Barbarian("Barbarian"); // change to enemy class constructor
         } else if (rand < 0.6) {
-            return new Barbarian("Barbarian"); // change to enemy class constructor
+            return new Skeleton(); // change to enemy class constructor
         } else {
-            return new Barbarian("Barbarian"); // change to enemy class constructor
+            return new Brigand_Spearman(); // change to enemy class constructor
         }
     }
 

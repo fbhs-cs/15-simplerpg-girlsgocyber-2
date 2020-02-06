@@ -4,6 +4,8 @@ public class Brigand_Spearman extends Character {
         super("Brigand Spearman",new String[] {"Piercing","Fire"},10);
         weapon = new Spear(5,.3);
         weapon.setWielder("Brigand Spearman");
+        this.setLevel(1);
+        this.setHP(this.getMaxHP());
     }
 
     @Override

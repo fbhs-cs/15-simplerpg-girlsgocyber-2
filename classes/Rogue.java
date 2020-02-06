@@ -8,6 +8,8 @@ public class Rogue extends Character{
         this.weapon = wep;
         weapon.setWielder("Player");
         CLASS_NAME = "Rogue";
+        this.setLevel(1);
+        this.setHP(this.getMaxHP());
     }
     public void chooseAction(Character in){
         Scanner s = new Scanner(System.in);
