@@ -125,6 +125,10 @@ public abstract class Character{
      */
     public int getSpeed(){
         return this.speed;
+    }   
+
+    public void heal(int in){
+        this.hp += in;
     }
 
     
