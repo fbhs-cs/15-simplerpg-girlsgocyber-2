@@ -26,7 +26,7 @@ public abstract class Weapon {
      * @param target
      * @return dmg output based on enemy weakness and crit chance.
      */
-    public abstract void attack(Character target);
+    public abstract int attack(Character target);
 
     /**
      * returns WEAPON_TYPE

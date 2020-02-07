@@ -4,7 +4,7 @@ public class Sword extends Weapon {
         WEAPON_TYPE = "Sword";
     }
 
-    public void attack(Character target) {
+    public int attack(Character target) {
         int tempDmg = this.getDmg();
         tempDmg *= Math.random()/2 + .5;
         if (target.isWeakTo(this.getDmgType())) {
@@ -26,7 +26,7 @@ public class Sword extends Weapon {
         else {
             System.out.printf("The %s swings a sword at you!\n",getWielder());
         }
-        target.takeDmg(tempDmg);;
+        return tempDmg;
     }
     
 }
