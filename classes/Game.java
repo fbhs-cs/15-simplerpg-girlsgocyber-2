@@ -81,7 +81,7 @@ public class Game {
         } else if (rand < 0.6) {
             return new Skeleton(); // change to enemy class constructor
         } else {
-            return new Brigand_Spearman(); // change to enemy class constructor
+            return new Brigand_Spearman("Brigand_Spearman"); // change to enemy class constructor
         }
     }
 
