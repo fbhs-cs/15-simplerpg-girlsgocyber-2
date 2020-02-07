@@ -13,6 +13,6 @@ public class Brigand_Spearman extends Character {
 
     @Override
     public void chooseAction(Character in) {
-        weapon.attack(in);
+        in.takeDmg(weapon.attack(in));
     }
 }

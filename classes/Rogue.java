@@ -18,7 +18,7 @@ public class Rogue extends Character{
         out.println("1. [Attack with weapon]");
         int choice = s.nextInt();
         if (choice == 1) {
-            weapon.attack(in);
+            in.takeDmg(weapon.attack(in));
         } else {
             System.out.println("The Rogue sharpens his dagger menacingly...");
         }
