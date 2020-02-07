@@ -5,7 +5,7 @@ public class Wizard extends Character{
     private Spell spell;
     private Weapon weapon = new Dagger(5,.1);
     public Wizard(String name, Spell spell){
-        super(name,new String []{"slashing","dark"},20);
+        super(name,new String []{"Slashing","Dark"}, 90);
         this.spell = spell;
         CLASS_NAME = "Wizard";
         this.setLevel(1);
