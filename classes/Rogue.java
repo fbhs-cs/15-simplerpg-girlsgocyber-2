@@ -10,6 +10,7 @@ public class Rogue extends Character{
         CLASS_NAME = "Rogue";
         this.setLevel(1);
         this.setHP(this.getMaxHP());
+        this.setMana(0);
     }
     public void chooseAction(Character in){
         Scanner s = new Scanner(System.in);
